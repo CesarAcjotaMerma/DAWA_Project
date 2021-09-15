@@ -1,0 +1,104 @@
+<%- include ('partials/_header'); -%>
+
+    <div class="container">
+        <div class="row">
+            <!--FORM-->
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/documentos/adddocumento" method="POST">
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="iddocumentocontable" placeholder="Id Serie"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="idcentro_costos" placeholder="Identidad"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="idtipo_documento" placeholder="ID tipo documento"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="idestado" placeholder="id estado"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="idestadosunat" placeholder="id estado Sunat"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="idmoneda" placeholder="Id moneda"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="idcondicion_pago" placeholder="id condicion pago"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="id_serie" placeholder="id serie"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="idempresa" placeholder="id empresa"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="tipo_operacion" placeholder="tipo operacion"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="numero_documento" placeholder="numero documento"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="id_origen" placeholder="id origen"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="direccion" placeholder="direccion"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="codigo_pedido" placeholder="codigo pedido"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="serie_pedido" placeholder="serie pedido"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="monto_subtotal" placeholder="monto subtotal"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="monto_igv" placeholder="monto igv"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="monto_total" placeholder="monto total"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="monto_total_desc" placeholder="monto total desc"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="valorigv" placeholder="valor igv"
+                                    >
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="total_precio_venta" placeholder="total precio venta"
+                                    >
+                            </div>
+                            <button class="btn btn-primary" type="submit">
+                                Agregar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%- include ('partials/_footer'); -%>

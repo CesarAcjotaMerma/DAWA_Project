@@ -1,0 +1,104 @@
+<%- include ('partials/_header'); -%>
+
+    <div class="container">
+        <div class="row">
+            <!--FORM-->
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/documentos/edit/<%= documento._id %>" method="POST">
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="iddocumentocontable" placeholder="Id Serie"
+                                    value="<%= documento.iddocumentocontable %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="idcentro_costos" placeholder="Identidad"
+                                    value="<%= documento.idcentro_costos %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="idtipo_documento" placeholder="ID tipo documento"
+                                    value="<%= documento.idtipo_documento %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="idestado" placeholder="id estado"
+                                    value="<%= documento.idestado %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="idestadosunat" placeholder="id estado Sunat"
+                                    value="<%= documento.idestadosunat %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="idmoneda" placeholder="Id moneda"
+                                    value="<%= documento.idmoneda %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="idcondicion_pago" placeholder="id condicion pago"
+                                    value="<%= documento.idcondicion_pago %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="id_serie" placeholder="id serie"
+                                    value="<%= documento.id_serie %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="idempresa" placeholder="id empresa"
+                                    value="<%= documento.idempresa %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="tipo_operacion" placeholder="tipo operacion"
+                                    value="<%= documento.tipo_operacion %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="numero_documento" placeholder="numero documento"
+                                    value="<%= documento.numero_documento %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="id_origen" placeholder="id origen"
+                                    value="<%= documento.id_origen %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="direccion" placeholder="direccion"
+                                    value="<%= documento.direccion %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="codigo_pedido" placeholder="codigo pedido"
+                                    value="<%= documento.codigo_pedido %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="serie_pedido" placeholder="serie pedido"
+                                    value="<%= documento.serie_pedido %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="monto_subtotal" placeholder="monto subtotal"
+                                    value="<%= documento.monto_subtotal %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="monto_igv" placeholder="monto igv"
+                                    value="<%= documento.monto_igv %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="monto_total" placeholder="monto total"
+                                    value="<%= documento.monto_total %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="monto_total_desc" placeholder="monto total desc"
+                                    value="<%= documento.monto_total_desc %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="valorigv" placeholder="valor igv"
+                                    value="<%= documento.valorigv %>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="total_precio_venta" placeholder="total precio venta"
+                                    value="<%= documento.total_precio_venta %>">
+                            </div>
+                            <button class="btn btn-primary" type="submit">
+                                Actualizar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%- include ('partials/_footer'); -%>
