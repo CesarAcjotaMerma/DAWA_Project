@@ -1,0 +1,75 @@
+<div class="col-md mx-auto">
+  <div class="card">
+    <div class="card-header">
+      <h4>Editor de Detalles</h4>
+    </div>
+    <div class="card-body">
+      <form action="/detalles/edit/{{detalles._id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="form-group">
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">ID Documento Detalle</label>
+            <div class="col-sm-10">
+              <input type="numeric" name="iddetalledocumento" class="form-control" value="{{detalles.iddetalledocumento}}" disabled>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">ID Doc. Contable</label>
+            <div class="col-sm-10">
+              <input type="numeric" name="iddocumentocontable" class="form-control" value="{{detalles.iddocumentocontable}}">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Item Descripcion</label>
+            <div class="col-sm-10">
+              <input type="text" name="descripcion_item" class="form-control" value="{{detalles.descripcion_item}}">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Precio U. Venta</label>
+            <div class="col-sm-10">
+              <input type="text" name="precio_unitario_venta" class="form-control" value="{{detalles.precio_unitario_venta}}">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Precio Unitario</label>
+            <div class="col-sm-10">
+              <input type="numeric" name="precio_unitario" class="form-control" value="{{detalles.precio_unitario}}">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Codigo U.</label>
+            <div class="col-sm-10">
+              <input type="numeric" name="codigo_unidad" class="form-control" value="{{detalles.codigo_unidad}}">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Descripcion U.</label>
+            <div class="col-sm-10">
+              <input type="numeric" name="descripcion_unidad" class="form-control" value="{{detalles.descripcion_unidad}}">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Cantidad</label>
+            <div class="col-sm-10">
+              <input type="numeric" name="cantidad" class="form-control" value="{{detalles.cantidad}}">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Subtotal</label>
+            <div class="col-sm-10">
+              <input type="numeric" name="subtotal" class="form-control" value="{{detalles.subtotal}}">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit">
+              Save
+            </button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Lista de Documentos</li>
+    </ol>
+</nav>
+
+<a class="btn btn-success" href='/tipodocumentos/add/'>Agregar Nuevo Documento</a>
+<br></br>
+
+<table class="table" width='100%' border=1>
+
+  <thead style='text-align:center;color:#fff;background-color:#273746'>
+    <th>ID Documento</th>
+    <th>Tipo Documento</th>
+    <th>Estado Sunat</th>
+    <th>Moneda</th>
+    <th>Empresa</th>
+    <th>Nro de Documento</th>
+    <th>Monto Subtotal</th>
+    <th>IGV</th>
+    <th>Monto Total</th>
+    <th>Opciones</th>
+  </thead>
+  {{#each documentos}}
+  <tr style='text-align:center;'>
+    <td>{{iddocumentocontable}}</td>
+    <td>{{idtipo_documento}}</td>
+    <td>{{idestadosunat}}</td>
+    <td>{{idmoneda}}</td>
+    <td>{{idempresa}}</td>
+    <td>{{numero_documento}}</td>
+    <td>{{monto_subtotal}}</td>
+    <td>{{monto_igv}}</td>
+    <td>{{monto_total}}</td>
+    <td>
+      <div style="float:center">
+        <a class="btn btn-primary btn-sm" href='/documentos/edit/<%= user.iddocumentocontable %>'><i class="fas fa-pen fa-sm"></i></a>
+
+        <form action="/documentos/delete/{{_id}}?_method=DELETE" method="POST" style="float:right">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn btn-danger btn-block btn-sm"><i class="far fa-trash-alt"></i></button>
+        </form>
+      </div>
+    </td>
+
+  </tr>
+
+  {{/each}}
+</table>

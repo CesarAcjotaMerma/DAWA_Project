@@ -1,8 +1,5 @@
-const app = require('../src/app');
-
-async function main() {
-    await app.listen(app.get('port'));
-    console.log('Server on port', app.get('port'));
-}
-
-main();
+const app = require('./server');
+require('./database');
+app.listen(app.get('port'),()=>{
+    console.log('server on port:',app.get('port'))
+})

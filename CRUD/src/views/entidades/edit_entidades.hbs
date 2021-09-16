@@ -1,0 +1,75 @@
+<div class="col-md mx-auto">
+  <div class="card">
+    <div class="card-header">
+      <h4>Editor de Entidades</h4>
+    </div>
+    <div class="card-body">
+      <form action="/entidades/edit/{{entidades._id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="form-group">
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Identidad</label>
+            <div class="col-sm-10">
+              <input type="numeric" name="identidad" class="form-control" value="{{entidades.identidad}}" disabled>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">ID Tipo Doc.</label>
+            <div class="col-sm-10">
+              <input type="numeric" name="idtipo_documento_identidad" class="form-control" value="{{entidades.idtipo_documento_identidad}}">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">ID Doc SUNAT</label>
+            <div class="col-sm-10">
+              <input type="numeric" name="codigo_tipo_documento_sunat" class="form-control" value="{{entidades.codigo_tipo_documento_sunat}}">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Tipo Doc Descripcion</label>
+            <div class="col-sm-10">
+              <input type="text" name="tipo_documento_descripcion" class="form-control" value="{{entidades.tipo_documento_descripcion}}">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Numero Documento</label>
+            <div class="col-sm-10">
+              <input type="numeric" name="numero_documento" class="form-control" value="{{entidades.numero_documento}}">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Razon Social</label>
+            <div class="col-sm-10">
+              <input type="numeric" name="razon_social" class="form-control" value="{{entidades.razon_social}}">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="numeric" name="correo_electronico" class="form-control" value="{{entidades.correo_electronico}}">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Direccion</label>
+            <div class="col-sm-10">
+              <input type="numeric" name="direccion" class="form-control" value="{{entidades.direccion}}">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Telefono</label>
+            <div class="col-sm-10">
+              <input type="numeric" name="telefono" class="form-control" value="{{entidades.telefono}}">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit">
+              Save
+            </button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

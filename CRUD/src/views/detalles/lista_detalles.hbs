@@ -1,0 +1,51 @@
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Lista de Detalles</li>
+    </ol>
+</nav>
+
+<a class="btn btn-success" href='/tipodocumentos/add/'>Agregar Nuevo Detalle</a>
+<br></br>
+
+<table class="table" width='100%' border=1>
+
+  <thead style='text-align:center;color:#fff;background-color:#273746'>
+    <th>ID Det. Doc.</th>
+    <th>ID Doc. Cont.</th>
+    <th>Descripcion</th>
+    <th>Precio Venta</th>
+    <th>Precio Unitario</th>
+    <th>Codigo Unidad</th>
+    <th>Cantidad</th>
+    <th>Subtotal</th>
+    <th>Opciones</th>
+
+  </thead>
+  {{#each detalles}}
+  <tr style='text-align:center;'>
+    <td>{{iddetalledocumento}}</td>
+    <td>{{iddocumentocontable}}</td>
+    <td>{{descripcion_item}}</td>
+    <td>{{precio_unitario_venta}}</td>
+    <td>{{precio_unitario}}</td>    
+    <td>{{codigo_unidad}}</td> 
+    <td>{{cantidad}}</td>    
+    <td>{{subtotal}}</td> 
+    
+    <td>
+      <div class="form-group mx-auto">
+        
+        <a class="btn btn-primary" href='/detalles/edit/{{_id}}'><i class="fas fa-pen fa-xs"></i></a>
+
+        <form action="/detalles/delete/{{_id}}?_method=DELETE" method="POST">
+						<button class="btn btn-danger" type="submit" name="delete" value='Delete' onClick="return confirm('¿Deseas Eliminar el Registro?')"><i class="far fa-trash-alt fa-xs"></i></button>
+						<input type="hidden" name="_method" value="DELETE" />
+        </form>
+      </div>
+    </td>
+
+  </tr>
+
+  {{/each}}
+</table>
